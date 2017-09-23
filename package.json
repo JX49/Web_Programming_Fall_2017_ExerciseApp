@@ -1,0 +1,26 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+      "eslint": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JX49/Web_Programming_Fall_2017_ExerciseApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JX49/Web_Programming_Fall_2017_ExerciseApp/issues"
+  },
+  "homepage": "https://github.com/JX49/Web_Programming_Fall_2017_ExerciseApp#readme"
+}
