@@ -1,0 +1,15 @@
+header {
+  background: primary-background;
+  margin-bottom: 10px; }
+
+body {
+  background-color: #FEA622; }
+
+.card .btn-primary {
+  font-family: "Courier New", Courier, monospace; }
+
+.card h4 {
+  text-align: center; }
+
+.card h5 {
+  text-align: center; }

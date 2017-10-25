@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>activity tracker</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="./dist/main.bundle.css">
+    </head>
+    <body>
+
+        <div id="header-placeholder"></div>
+
+        <div class="container">
+         <div class="row">
+               <div class="col-md-5">
+                   <ul id="activity_list">
+                       <li>Activities for today:</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+             
+             <div class ="drop">
+                <div class="dropdown">
+                 <button class="dropbutton">pick an activity</button>
+                     <div class="dropdown-content">
+                         <a class="activity" href="#">Running</a>
+                         <a class="activity" href="#">Weight Training</a>
+                         <a class="activity" href="#">Aerobics</a>
+                         <a class="activity" href="#">Cardio</a>
+                         <a class="activity" href="#">Schwimmen</a>
+                         <a class="activity" href="#">Laufen</a>
+                     </div>
+                </div>
+            </div>
+
+            </div>
+
+         </div>
+        </div>
+         
+                    
+          
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+       
+       $('.activity').click(function(){
+           var activity_element = $(this).text();
+           var list_item = $('<li></li>').text(activity_element);
+        $('#activity_list').append(list_item);
+
+                      });
+
+        
+            });
+        
+        </script>
+    </body>
+</html>

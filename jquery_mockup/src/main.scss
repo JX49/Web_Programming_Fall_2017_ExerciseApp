@@ -1,0 +1,84 @@
+
+@import "~bootstrap/scss/bootstrap";
+$primary-background: #BBBBFF;
+$monospace: "Courier New", Courier, monospace;
+
+header{
+    background: primary-background;
+    margin-bottom: 10px;
+}
+body{
+    background-color: #FEA622;
+}
+
+
+.card{
+    .btn-primary {
+        font-family: $monospace;
+        
+    }
+    h4{
+        text-align: center;
+    }
+    h5{
+        text-align: center;
+    }
+
+}
+
+.drop{
+    background-color:#6841f4;
+     position: fixed;
+    margin-left:auto;
+    margin-right:auto;
+    
+    display: inline;
+}
+
+
+.dropbutton {
+   background-color: #426bf4;
+    color: white;
+    padding: 20px;
+     font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+     font-style: bold;
+     font-size: 30;
+    border: none;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown_right_nodrop
+{
+    float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #426bf4;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+     font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+     font-style: bold;
+     font-size: 25;
+    padding: 20px 20px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbutton {
+    background-color: #2eb82e;
+    color: black;
+}
+
