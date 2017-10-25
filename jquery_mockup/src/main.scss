@@ -56,7 +56,7 @@ body{
     float: right;
 }
 
-.dropdown-content {
+.activity-dropdown-content {
     display: none;
     position: absolute;
     background-color: #426bf4;
@@ -64,7 +64,7 @@ body{
     z-index: 1;
 }
 
-.dropdown-content a {
+.activity-dropdown-content a {
     color: white;
      font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
      font-style: bold;
@@ -73,7 +73,7 @@ body{
     text-decoration: none;
     display: block;
 }
-.dropdown:hover .dropdown-content {
+.dropdown:hover .activity-dropdown-content {
     display: block;
 }
 
@@ -81,4 +81,7 @@ body{
     background-color: #2eb82e;
     color: black;
 }
-
+#activity_list{
+    overflow: scroll;
+    
+}
