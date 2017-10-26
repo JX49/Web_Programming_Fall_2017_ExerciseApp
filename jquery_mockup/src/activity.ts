@@ -11,7 +11,7 @@ export class User {
  
 
     drawActivities(){
-        $("#activities").html(this.activities.map(x=> `<li class="my-list1 list-group-item activity">${x.text}</li>`).join(""))
+        $("#activities").html(this.activities.map(x=> `<li class="list-group-item activity">${x.text}</li>`).join(""))
     }
 }
 
@@ -22,7 +22,7 @@ export class Tracker {
     activities: Activity[] = [  ];
 
     drawActivities(){
-        $("#activity_list").html(this.activities.map(x=> `<li class="my-list2 list-group-item btn-block activity">${x.text}</li><div id="picker-placeholder"></div>`).join(""))
+        $("#activity_list").html(this.activities.map(x=> `<li class="list-group-item btn-block activity">${x.text}</li><div id="picker-placeholder"></div>`).join(""))
     }
 
     init(){
