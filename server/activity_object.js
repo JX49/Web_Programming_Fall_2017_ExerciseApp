@@ -6,7 +6,10 @@ module.exports = {
         { text: "boating"},
         { text: "running" },
         { text: "cardio" },
-        { text: "weight training" }
+        { text: "weight training" },
+        { text: "ditch digging" },
+        { text: "mountain climbing" }
+
 
     ]
 }

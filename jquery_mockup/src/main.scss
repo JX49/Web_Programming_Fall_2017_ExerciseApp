@@ -1,14 +1,17 @@
 
 @import "~bootstrap/scss/bootstrap";
-$primary-background: #BBBBFF;
+$primary-background: #FEA622;
+$secondary:rgb(255, 221, 0);
+$tertiary:#B568EC;
+$quaternary:#6B00B8;
 $monospace: "Courier New", Courier, monospace;
 
 header{
-    background: primary-background;
-    margin-bottom: 10px;
+    background: $primary-background;
+    margin-bottom: 20px;
 }
 body{
-    background-color: #FEA622;
+    background-color: $primary-background;
 }
 
 
@@ -26,62 +29,95 @@ body{
 
 }
 
-.drop{
-    background-color:#6841f4;
-     position: fixed;
-    margin-left:auto;
-    margin-right:auto;
+
+#activity_list{
+  
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    outline: 10px;
+    width:100%;
+    padding: 15px;
+
     
-    display: inline;
+}
+
+#activities{
+   
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+        outline: 10px;
+}
+
+.activity{
+    font-size: 26px;
+    background-color: $secondary;
+}
+
+.mypanel{
+    font-size: 30px;
+}
+
+.navbar-nav{
+    background-color: $tertiary;
+
+}
+.navbar{
+    background-color: $tertiary;
+    margin-bottom: 0px;
+}
+
+#myNav{
+    background-color: $tertiary;
+    margin-bottom: 0px;
+    border:0px;
+}
+
+.nav-item{
+    background-color: $tertiary;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+.navbar-brand{
+    background-color: $secondary;
+   
+
+}
+
+#navbarNav{
+    background-color: $quaternary;
+}
+.navbar-collapse{
+    background-color: $quaternary;
 }
 
 
-.dropbutton {
-   background-color: #426bf4;
-    color: white;
-    padding: 20px;
-     font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-     font-style: bold;
-     font-size: 30;
-    border: none;
-    cursor: pointer;
+#signup_box{
+    border:  15px 15px 15px 15px;
+    padding: 15px;
+    background-color: $quaternary;
 }
-.dropdown {
-    position: relative;
-    display: inline-block;
+.center-button{
+text-align: center;
+}
+.jumbotron{
+    background-color: $secondary;
 }
 
-.dropdown_right_nodrop
-{
-    float: right;
-}
-
-.activity-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #426bf4;
-    min-width: 160px;
-    z-index: 1;
-}
-
-.activity-dropdown-content a {
-    color: white;
-     font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-     font-style: bold;
-     font-size: 25;
-    padding: 20px 20px;
-    text-decoration: none;
-    display: block;
-}
-.dropdown:hover .activity-dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbutton {
-    background-color: #2eb82e;
+.jumbotron:hover{
+    background-color: $tertiary;
     color: black;
 }
-#activity_list{
-    overflow: scroll;
-    
+#front-image{
+    width:75%;
+}
+
+.navbar.navbar-expand-lg{
+    background-color: $tertiary;
+}
+
+.navbar-nav > li > a {
+    border-top: 4px solid transparent;
 }
