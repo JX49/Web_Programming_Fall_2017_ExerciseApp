@@ -7,3 +7,4 @@ router
     .get("/activities",(req, res) => res.send(activity.activities))
   
     module.exports.router = router;
+    
