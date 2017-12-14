@@ -24,7 +24,9 @@ module.exports = {
             test: /\.tsx?$/,
             use: 'ts-loader',
             exclude: /node_modules/
-        }]
+        }],
+        resolve:{
+            extensions: ['.tsx', '.jsx', '.ts', '.js']
     },
     plugins: [
         new webpack.ProvidePlugin({
@@ -34,6 +36,7 @@ module.exports = {
             Popper: ['popper.js', 'default'],
           }),
         extractSass
-    ]
+    ],
+    devtool: 'source-map'
 };
 

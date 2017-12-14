@@ -3,13 +3,16 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist",
+    "noImplicitAny": true,
     "sourceMap": true,
     "declaration": false,
-    "noImplicitAny":true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
+    "allowJs": true,
+    "jsx":"react",
+    "allowSyntheticDefaultImports": true,
     "typeRoots": [
       "node_modules/@types"
     ],
