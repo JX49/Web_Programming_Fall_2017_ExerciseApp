@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-food',
-  templateUrl: './food.component.html',
-  styleUrls: ['./food.component.scss'],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class FoodComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
   constructor() { }
 

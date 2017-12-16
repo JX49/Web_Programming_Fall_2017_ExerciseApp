@@ -1,15 +1,16 @@
-module.exports = {
-   
-    activities: [
-        { text: "swimming" },
-        { text: "fencing" },
-        { text: "boating"},
-        { text: "running" },
-        { text: "cardio" },
-        { text: "weight training" },
-        { text: "ditch digging" },
-        { text: "mountain climbing" }
+const activites = require("./activities")
+
+const activity = {
 
 
-    ]
+    activites: activites,
+    room:{
+        Users:[],
+        Activities:[]
+
+    }
+
 }
+
+
+module.exports = activity;

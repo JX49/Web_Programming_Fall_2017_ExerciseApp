@@ -6,7 +6,7 @@ import { NavComponent } from './nav/nav.component';
 import { HeaderComponent } from './header/header.component';
 import { ActivityComponent } from './activity/activity.component';
 import { IndexComponent } from './index/index.component';
-import { FoodComponent } from './food/food.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { FoodComponent } from './food/food.component';
     HeaderComponent,
     ActivityComponent,
     IndexComponent,
-    FoodComponent
+    LoginComponent,
+
   ],
   imports: [
     BrowserModule

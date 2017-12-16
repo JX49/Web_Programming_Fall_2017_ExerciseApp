@@ -13,7 +13,7 @@ server.use("/json", function(req, res, next){
 
 server.use("/client",express.static("./jquery_mockup"))
 server.use("/old", handler.main);
-server.use("/activity-tracker", activityController.router);
+server.use("/activity", activityController.router);
     
 
 server.listen(3000);
