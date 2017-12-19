@@ -3,13 +3,14 @@
 export class Activity {
     text: string;
     calories: number;
-    player: string;
+    user: string;
 }
 
 export class User {
     id: number;
     name: string = "billy";
-    quotes: Activity[] = [];
+    activities: Activity[] = [];
+    completed: Activity[] = [];
     
 
 
@@ -19,8 +20,8 @@ export class User {
 }
 
 export class Room {
-    players: User[] = [new User(), new User()];
-    Activities: Activity[] = [];
+    users: User[] = [new User(), new User()];
+    activities: Activity[] = [];
     
 
     

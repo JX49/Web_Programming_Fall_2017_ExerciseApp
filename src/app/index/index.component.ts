@@ -7,8 +7,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class IndexComponent implements OnInit {
+  fullImagePath: string;
 
-  constructor() { }
+  constructor() { 
+    this.fullImagePath = '/assets/images/1.jpg'
+  }
 
   ngOnInit() {
   }

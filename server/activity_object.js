@@ -1,16 +1,17 @@
-const activites = require("./activities")
+const activities = require("./activities")
 
 const activity = {
 
 
-    activites: activites,
+    activities: activities,
     room:{
-        Users:[],
-        Activities:[]
+        users:[],
+        activities:[]
 
     }
 
 }
+
 
 
 module.exports = activity;

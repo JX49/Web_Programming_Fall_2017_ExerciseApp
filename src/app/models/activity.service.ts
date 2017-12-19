@@ -60,13 +60,14 @@ export class ActivityService {
 
 login(name: string, password: string, fbid?: string, picture?: string){
     console.log(name + " " + password + " " + fbid + " " + picture)
-    this.http.post(this.apiRoot + "/activity/room/players", { name, password, fbid, picture }).subscribe(
+    this.http.post(this.apiRoot + "/activity/room/users", { name, password, fbid, picture }).subscribe(
         data => {
             this.me = data.json();
-            this.http.get(this.apiRoot + "/activity/activites").subscribe( data =>{
-                this.me.quotes = data.json();
+            this.http.get(this.apiRoot + "/activity/activities").subscribe( data =>{
+                this.me.activities = data.json();
+                this.me.completed = [];
             });
-            this.router.navigate(['/activity-tracker']);
+            this.router.navigate(['/activity']);
         },
         err => {
             console.log(err);

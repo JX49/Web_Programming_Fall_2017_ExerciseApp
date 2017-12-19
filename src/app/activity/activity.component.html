@@ -1,3 +1,74 @@
-<p>
-  activity works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-3">
+          <div class="card" >
+              <div class="card-header">
+                  Users online now!
+              </div>
+              <ul class="list-group list-group-flush" id="users">
+                  <li *ngFor="let x of room.users; index as i" class="list-group-item">
+                      <img [src]="x.picture" style="width: 26px;" class="rounded" />
+                     
+                      {{x.name}}
+                  </li>
+              </ul>
+          </div>
+          
+          <div class="card" >
+              <div class="card-header">
+                 Avalible activities
+              </div>
+              <ul class="list-group list-group-flush" id="my-activities" >
+                  <li *ngFor="let x of me.activities; index as i" 
+                      class="list-group-item"
+                      
+                      (click)="submitActivity($event, x, i)">
+                      {{x.text}}
+                  </li>
+              </ul>
+          </div>
+
+      </div>
+      <div class="col-md-9">
+          <img [src]="fbImage" />
+
+          <div class="card" >
+            <div class="card-header">
+               my completed activites 
+            </div>
+            <ul class="list-group list-group-flush" id="played-quotes">
+                <li *ngFor="let x of me.completed; index as i" 
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                    {{x.text}} 
+        
+                </li>
+            </ul>
+        </div>
+
+
+
+        
+              <div class="card" >
+                      <div class="card-body">
+                         
+                       
+                          
+                          <div class="card" >
+                                  <div class="card-header">
+                                      completed activites 
+                                  </div>
+                                  <ul class="list-group list-group-flush" id="played-quotes">
+                                      <li *ngFor="let x of room.activities; index as i" 
+                                          class="list-group-item d-flex justify-content-between align-items-center"
+                                      >
+                                          {{x.text}} by {{x.user}}
+                              
+                                      </li>
+                                  </ul>
+                              </div>
+                                              
+                      </div>
+                  </div>
+              </div>        
+          </div>    
