@@ -1,13 +1,27 @@
 @import "~bootstrap/scss/bootstrap";
 $primary-background: #FEA622;
 $secondary:rgb(255, 221, 0);
+$number:rgb(203, 131, 25);
 $tertiary:#B568EC;
 $quaternary:#6B00B8;
 $monospace: "Courier New", Courier, monospace;
 
+
+.btn-primary {
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+
+
+.spacer{
+    
+        background-color:$primary-background;
+        height: 50px;
+        width: 100%;
+    }
 header{
     background: $primary-background;
-    margin-bottom: 20px;
+    
 }
 body{
     background-color: $primary-background;
@@ -15,10 +29,7 @@ body{
 
 
 .card{
-    .btn-primary {
-        font-family: $monospace;
-        
-    }
+   
     h4{
         text-align: center;
     }
@@ -29,7 +40,7 @@ body{
 }
 
 
-#activity_list{
+#completed{
   
     color: black;
     font-size: 25px;
@@ -37,17 +48,20 @@ body{
     outline: 10px;
     width:100%;
     padding: 15px;
+    background-color: $number;
 
     
 }
 
-#activities{
+#activity{
+
    
     color: black;
     font-size: 25px;
     text-align: center;
     width: 100%;
         outline: 10px;
+        background-color: $number;
 }
 
 .activity{
@@ -79,118 +93,7 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     
 }
-.navbar-brand{
-    background-color: $secondary;
-   
 
-}
-
-
-
-#signup_box{
-    border:  15px 15px 15px 15px;
-    padding: 15px;
-    background-color: $quaternary;
-}
-.center-button{
-text-align: center;
-}
-.jumbotron{
-    background-color: $secondary;
-}
-
-.jumbotron:hover{
-    background-color: $tertiary;
-    color: black;
-}
-#front-image{
-    width:75%;
-}@import "~bootstrap/scss/bootstrap";
-$primary-background: #FEA622;
-$secondary:rgb(255, 221, 0);
-$tertiary:#B568EC;
-$quaternary:#6B00B8;
-$monospace: "Courier New", Courier, monospace;
-
-header{
-    background: $primary-background;
-    margin-bottom: 20px;
-}
-body{
-    background-color: $primary-background;
-}
-
-
-.card{
-    .btn-primary {
-        font-family: $monospace;
-        
-    }
-    h4{
-        text-align: center;
-    }
-    h5{
-        text-align: center;
-    }
-
-}
-
-
-#activity_list{
-  
-    color: black;
-    font-size: 25px;
-    text-align: center;
-    outline: 10px;
-    width:100%;
-    padding: 15px;
-
-    
-}
-
-#activities{
-   
-    color: black;
-    font-size: 25px;
-    text-align: center;
-    width: 100%;
-        outline: 10px;
-}
-
-.activity{
-    font-size: 26px;
-    background-color: $secondary;
-}
-
-.mypanel{
-    font-size: 30px;
-}
-
-.navbar-nav{
-    background-color: $tertiary;
-
-}
-.navbar{
-    background-color: $tertiary;
-    margin-bottom: 0px;
-}
-
-#myNav{
-    background-color: $tertiary;
-    margin-bottom: 0px;
-    border:0px;
-}
-
-.nav-item{
-    background-color: $tertiary;
-    font-family:Arial, Helvetica, sans-serif;
-    
-}
-.navbar-brand{
-    background-color: $secondary;
-   
-
-}
 
 
 
@@ -200,16 +103,18 @@ body{
     margin-top: 25px;
     border-radius: 15px;
     background-color: $quaternary;
+    border-color: $primary-background;
 }
 .center-button{
 text-align: center;
 }
 .jumbotron{
-    background-color: $secondary;
+    background-color: $secondary !important;
+    color: black;
 }
 
 .jumbotron:hover{
-    background-color: $tertiary;
+    background-color: $tertiary !important;
     color: black;
 }
 #front-image{
@@ -235,3 +140,49 @@ text-align: center;
 
     cursor: pointer;
 }
+
+.card-header{
+    font-family:   Arial, sans-serif;
+    font-size: 45px;
+    font-style: bold;
+    background-color:#00A900;
+    text-align: center;
+
+    
+    
+    
+}
+.card{
+    color:#383838;
+    background-color:#00A900;
+    text-align: center;
+}
+
+.container{
+    background-color: $primary-background;}
+.container-fluid{
+    background-color: $primary-background;}
+.list-group{background-color: $number;}
+.list-group-item{background-color: $number;}
+html{
+    background-color: $primary-background;
+}
+
+.bk{background-color: $primary-background;}
+h3{text-align: center;
+font-family: Impact, 'Arial Narrow Bold', sans-serif;
+font-size: 50px;
+
+
+}
+
+.h{text-align: center;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: 150px;
+    background-color: $primary-background;
+    
+    
+    }
+
+
+    header{  background-color: $tertiary;}

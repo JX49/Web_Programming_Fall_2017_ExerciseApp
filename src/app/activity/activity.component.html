@@ -1,12 +1,16 @@
+
+<div class="spacer">
+</div>
+
 <div class="container-fluid">
   <div class="row">
       <div class="col-md-3">
-          <div class="card" >
+          <div class="card text-black bg-success" >
               <div class="card-header">
                   Users online now!
               </div>
               <ul class="list-group list-group-flush" id="users">
-                  <li *ngFor="let x of room.users; index as i" class="list-group-item">
+                  <li *ngFor="let x of room.users; index as i" class="activity list-group-item">
                       <img [src]="x.picture" style="width: 26px;" class="rounded" />
                      
                       {{x.name}}
@@ -14,61 +18,69 @@
               </ul>
           </div>
           
-          <div class="card" >
+          <div class="card text-black bg-success" >
               <div class="card-header">
-                 Avalible activities
+                 avalible activities
               </div>
-              <ul class="list-group list-group-flush" id="my-activities" >
-                  <li *ngFor="let x of me.activities; index as i" 
+              <ul class="list-group list-group-flush"  >
+                  <li id="activity" *ngFor="let x of me.activities; index as i" 
                       class="list-group-item"
                       
-                      (click)="submitActivity($event, x, i)">
+                      >
                       {{x.text}}
+
+                      
+                      <input type="number" class="form-control" id="calories" value="0" [(ngModel)]="calories">
+                      <label for="calories">calories</label>
+                      <div class="btn-sm btn-primary button" type="button" (click)="submitActivity($event, x, i,calories)">submit</div>
                   </li>
+
+
+
+                  
               </ul>
           </div>
 
       </div>
-      <div class="col-md-9">
-          <img [src]="fbImage" />
+     
+          
 
-          <div class="card" >
+          <div class= "col-sm">
+          <div class="card text-black bg-success" >
             <div class="card-header">
                my completed activites 
             </div>
-            <ul class="list-group list-group-flush" id="played-quotes">
-                <li *ngFor="let x of me.completed; index as i" 
-                    class="list-group-item d-flex justify-content-between align-items-center"
+            <ul class="list-group list-group-flush" id="completed">
+                <li id="activity" *ngFor="let x of me.completed; index as i" 
+                    class="completed list-group-item d-flex justify-content-between align-items-center"
                 >
-                    {{x.text}} 
+                    I burned {{x.calories}} calories {{x.text}}
         
                 </li>
             </ul>
         </div>
+          </div>
 
 
-
-        
-              <div class="card" >
-                      <div class="card-body">
-                         
+          <div class= "col-sm">
+            
                        
                           
-                          <div class="card" >
+                          <div class="card text-black bg-primary" >
                                   <div class="card-header">
-                                      completed activites 
+                                      What are they doing?? 
                                   </div>
-                                  <ul class="list-group list-group-flush" id="played-quotes">
-                                      <li *ngFor="let x of room.activities; index as i" 
-                                          class="list-group-item d-flex justify-content-between align-items-center"
+                                  <ul class="list-group list-group-flush" id="completed">
+                                      <li id="activity" *ngFor="let x of room.activities; index as i" 
+                                          class="completed list-group-item d-flex justify-content-between align-items-center"
                                       >
-                                          {{x.text}} by {{x.user}}
+                                            {{x.user}} burned {{x.cals}} calories  {{x.text}}
                               
                                       </li>
                                   </ul>
-                              </div>
-                                              
-                      </div>
+                             
                   </div>
-              </div>        
+          </div>
+                      
           </div>    
+</div>

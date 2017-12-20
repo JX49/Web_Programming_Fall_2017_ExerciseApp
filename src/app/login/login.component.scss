@@ -1,0 +1,22 @@
+@import "~bootstrap/scss/bootstrap";
+$primary-background: #FEA622;
+$secondary:rgb(255, 221, 0);
+$number:rgb(203, 131, 25);
+$tertiary:#B568EC;
+$quaternary:#6B00B8;
+
+
+.spacer{
+
+    background-color:$primary-background;
+    height: 50px;
+    width: 100%;
+}
+
+.btn{
+    color: white;
+    font-size: 25px;
+}
+a{
+    color: white;
+}

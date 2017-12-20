@@ -22,7 +22,7 @@ export class ActivityComponent implements OnInit {
   ngOnInit() {
 
     if(this.activity.me == null){
-      console.log("fuck")
+      
       this.router.navigate(['/login']);
     }
     this.me = this.activity.me;
@@ -37,10 +37,11 @@ export class ActivityComponent implements OnInit {
 
   }
 
-  submitActivity(e: MouseEvent, activity: Activity, i: number){
+  submitActivity(e: MouseEvent, activity: Activity, i: number,calories?: number){
     e.preventDefault();
-  
-    const data = { text: activity.text, user: this.me.name };
+  console.log(calories);
+  activity.calories = calories;
+    const data = { text: activity.text, user: this.me.name, cals: calories };
     console.log("test below");
     console.log(this.me.name);
     

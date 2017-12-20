@@ -1,4 +1,8 @@
 <div class="container-fluid">
+<div class="spacer">
+</div>
+
+
   <div class="row">
       <div class="col-md-12">
           <div class="form-group row">
@@ -13,8 +17,14 @@
               <input type="password" class="form-control" id="inputPassword3" placeholder="Password" [(ngModel)]="password">
               </div>
           </div>
-          <a class="btn" (click)="login()">Login</a>
-          <a class="btn" (click)="loginFB()">Login with facebook</a>
+          <div class="spacer">
+            </div>
+            
+          <a class="btn btn-success btn-block" (click)="login()">Login</a>
+          <a class="btn btn-success btn-block" (click)="loginFB()">Login with facebook</a>
+          <div class="spacer">
+            </div>
+            
       </div>
   </div>
 </div>
