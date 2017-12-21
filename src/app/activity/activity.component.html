@@ -30,21 +30,35 @@
                       {{x.text}}
 
                       
-                      <input type="number" class="form-control" id="calories" value="0" [(ngModel)]="calories">
+                      <input type="number" class="form-control" id="calories" value="0" [(ngModel)]="calories"/>
                       <label for="calories">calories</label>
                       <div class="btn-sm btn-primary button" type="button" (click)="submitActivity($event, x, i,calories)">submit</div>
                   </li>
+                </ul>
+                <ul   class="list-group list-group-flush">
+                  
+                  <li id="activity"  class="list-group-item">
+                  
 
+                  
+                 
 
+                    <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="autoBox" name="autoBox" [ngbTypeahead]="search"/>
+                    
+                    <pre>Model: {{ autoBox | json }}</pre>
+                  <input type="number" class="form-control" id="calories" value="0" [(ngModel)]="calories" />
+                  <label for="calories">calories</label>
+                  <div class="btn-sm btn-primary button" type="button" (click)="submitActivityNew($event, autoBox ,calories)">submit</div>
+              </li>
 
                   
               </ul>
           </div>
 
-      </div>
+      </div> 
      
           
-
+ 
           <div class= "col-sm">
           <div class="card text-black bg-success" >
             <div class="card-header">

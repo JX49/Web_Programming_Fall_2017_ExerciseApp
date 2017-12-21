@@ -4,6 +4,17 @@ import {Room, User, Activity} from "../models/activity"
 import { ActivityService } from "../models/activity.service";
 import { Router } from '@angular/router';
 
+//Final
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
+
+const exercises = ['weight lifting', 'surfing', 'boxing',
+'parkour', 'diving', 'yoga' ];
+
+
 @Component({
   selector: 'app-activity',
   templateUrl: './activity.component.html',
@@ -11,6 +22,8 @@ import { Router } from '@angular/router';
   
 })
 export class ActivityComponent implements OnInit {
+  
+
 
   room = new Room();
   me: User;
@@ -43,7 +56,7 @@ export class ActivityComponent implements OnInit {
   activity.calories = calories;
     const data = { text: activity.text, user: this.me.name, cals: calories };
     console.log("test below");
-    console.log(this.me.name);
+    console.log(data);
     
     this.http.post(this.activity.apiRoot + "/activity/room/activities", data).subscribe(res=>{
     console.log("posted");
@@ -51,6 +64,41 @@ export class ActivityComponent implements OnInit {
     })
     
   }
+  
+  submitActivityNew(e: MouseEvent, activity: string,calories?: number){
+    e.preventDefault();
+  console.log(calories);
+  
+let newActivity = new Activity;
+newActivity.text = activity;
+  newActivity.calories = calories;
+  newActivity.user = this.me.name;
 
+    const data = { text: activity, user: this.me.name, cals: calories };
+    console.log("test below");
+    console.log(data);
+    
+    this.http.post(this.activity.apiRoot + "/activity/room/activities", data).subscribe(res=>{
+    console.log("posted");
+      this.me.completed.push(newActivity);
+    })
+    
+  }
+
+
+}
+
+
+
+
+export class NgbdTypeaheadBasic {
+  public autoBox: any;
+
+  search = (text$: Observable<string>) =>
+    text$
+      .debounceTime(200)
+      .distinctUntilChanged()
+      .map(term => term.length < 2 ? []
+        : exercises.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10));
 
 }
